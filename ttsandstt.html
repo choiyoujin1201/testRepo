@@ -4,8 +4,20 @@
         <meta charset = 'utf-8'>
     </head>
     <body>
+        <button class = 'record'> Record </button>
         <script src = "./js/ttsandstt.js"></script>
         <!-- responsivevoice api (based on web speech api) -->
         <!-- <script src = "https://code.responsivevoice.org/responsivevoice.js?key=p6bZ67SJ"></script> -->
+        <script>
+            const button = document.querySelector('.record');
+            button.addEventListener('click', () => startSpeechrecognition()
+                                    .then(transcript => {
+                                        console.log('인식된 텍스트: ', transcript);
+                                    })
+                                    .catch(error => {
+                                        console.error(error);
+                                    });
+            )
+        </script>
     </body>
 </html>
