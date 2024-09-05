@@ -58,10 +58,10 @@ function startSpeechRecognition() {
 }
 
 // 사용 예시
-startSpeechRecognition()
-    .then(transcript => {
-        console.log('인식된 텍스트:', transcript);
-    })
-    .catch(error => {
-        console.error(error);
-    });
+// startSpeechRecognition()
+//     .then(transcript => {
+//         console.log('인식된 텍스트:', transcript);
+//     })
+//     .catch(error => {
+//         console.error(error);
+//     });
