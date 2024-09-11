@@ -5,6 +5,7 @@
     </head>
     <body>
         <button class = 'record'> Record </button>
+        <div class = 'result'></div>
         <script src = "./js/ttsandstt.js"></script>
         <!-- responsivevoice api (based on web speech api) -->
         <!-- <script src = "https://code.responsivevoice.org/responsivevoice.js?key=p6bZ67SJ"></script> -->
@@ -13,6 +14,7 @@
             button.addEventListener('click', () => startSpeechRecognition()
                                     .then(transcript => {
                                         console.log('인식된 텍스트: ', transcript);
+                                        $('.result').text = transcript;
                                     })
                                     .catch(error => {
                                         console.error(error);
