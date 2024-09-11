@@ -5,7 +5,6 @@
     </head>
     <body>
         <button class = 'record'> Record </button>
-        <div class = 'result'></div>
         <script src = "./js/ttsandstt.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- responsivevoice api (based on web speech api) -->
@@ -15,11 +14,11 @@
             button.addEventListener('click', () => startSpeechRecognition()
                                     .then(transcript => {
                                         console.log('인식된 텍스트: ', transcript);
-                                        $('.result').text = transcript;
+                                        alert(transcript);
                                     })
                                     .catch(error => {
                                         console.error(error);
-                                        $('.result').text = error;
+                                        alert(error);
                                     }));
         </script>
     </body>
