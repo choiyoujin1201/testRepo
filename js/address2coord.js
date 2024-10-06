@@ -1,3 +1,11 @@
+address2coord2('호산로 37-19')
+    .then((data) => {
+        this.displayData2(data);
+    })
+    .catch((error) => {
+        console.error(error);
+    });
+
 // using kakao dev api
 function address2coord(address){
     return new Promise((resolve, reject) => {
