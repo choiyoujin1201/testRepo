@@ -1,4 +1,4 @@
-address2coord2('호산로 37-19')
+address2coord2('연암공원로 10')
     .then((data) => {
         this.displayData2(data);
     })
